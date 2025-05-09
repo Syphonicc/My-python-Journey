@@ -36,6 +36,7 @@ while is_running:
         else:
             print(f"Correct!")
             print(f"Number of guesses: {guesses}")
+            is_running = False
     else:
         print("write a valid number ")
 

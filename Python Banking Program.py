@@ -23,15 +23,24 @@ while is_running:
 
     elif user_input == 2:
         dep = int(input("How much would you like to deposit?"))
-        total += dep
-        print(f"You have succesfully deposited ${dep} amount")
+        if dep < 0:
+            print("Not a valid amount")
+        else:
+            total += dep
+            print(f"You have succesfully deposited ${dep} amount")
 
     elif user_input == 3:
         wit = int(input("How much would you like to withdraw?"))
-        total -= wit
-        print(f"You have succesfully withdrawn ${wit} amount")
+        if wit > total:
+            print("Not a valid amount")
+        elif wit < 0:
+            print("Not a valid amount")
+        else:
+            total -= wit
+            print(f"You have succesfully withdrawn ${wit} amount")
 
     elif user_input == 4:
             is_running =False
     else:
         print("The number is not valid")
+print("Have a nice day!")
